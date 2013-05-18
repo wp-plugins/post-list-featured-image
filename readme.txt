@@ -1,7 +1,7 @@
 === Plugin Name ===
-Contributors: JAkzam, PCGrejaldo
+Contributors: JAkzam, pcgrejaldo
 Donate link: http://jaggededgemedia.com/donate/
-Tags: featured, image, posts, pages
+Tags: featured, image, posts, pages, developer tools
 Requires at least: 3.5.1
 Tested up to: 3.5.1
 Stable tag: trunk
@@ -12,8 +12,9 @@ A plugin that adds the "Featured Image" column in admin posts and pages list.
 
 == Description ==
 
-A plugin that adds the "Featured Image" column in admin posts and pages list. It lets the wordpress site owners see
-which posts or pages have its featured image set.
+Finally a simple plugin that adds the "Featured Image" column in admin posts and pages list. It lets the wordpress site owners see which posts or pages have its featured image set. 
+
+Of course, this is mainly intended for use on the Post List page, since most themes require a featured image be set for the excerpt thumbnail image. It doesn't seem like much, and the plugin is truly non-invasive to the rest fo the WP install. But the value that this simple tool can have on the overall organization for Admins and Developers of WordPress websites is priceless.
 
 == Installation ==
 
