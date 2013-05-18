@@ -34,6 +34,8 @@ Send them to support@jaggededgemedia.com
 
 1. Screenshot shows the "Featured Image" column added in Posts list.
 2. Screenshot shows the "Featured Image" column added in Pages list.
+3. Screenshot shows the WP Directory installation process.
+4. Screenshot shows the WP Upload Zip file installation process.
 
 == Changelog ==
 
