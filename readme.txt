@@ -18,12 +18,16 @@ Of course, this is mainly intended for use on the Post List page, since most the
 
 == Installation ==
 
-1. Upload posts-list-featured-image.zip via "wp-admin/plugin-install.php?tab=upload" or if using FTP, unzip
+1. **(Recommended)** Install directly from the WP Directory through your admin panel Plugins>Add New>>Search for "Post List Featured Image". Click install under the name, and activate when prompted. 
+
+2. Upload posts-list-featured-image.zip via "wp-admin/plugin-install.php?tab=upload" or if using FTP, unzip
 posts-list-featured-image.zip and upload `/posts-list-featured-image/` directory to the `/wp-content/plugins/`
 directory.
-2. Activate the plugin through the 'Plugins' menu in WordPress (under plugin name:
+
+3. Activate the plugin through the 'Plugins' menu in WordPress (under plugin name:
 **"Posts List Featured Image"**).
-3. Find more Installation options at http://jaggededgemedia.com/plugins/post-list-featured-image/
+
+4. Find more Installation options at http://jaggededgemedia.com/plugins/post-list-featured-image/
 
 == Frequently Asked Questions ==
 
