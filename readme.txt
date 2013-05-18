@@ -1,5 +1,5 @@
 === Plugin Name ===
-Contributors: JAkzam, PCGrejaold
+Contributors: JAkzam, PCGrejaldo
 Donate link: http://jaggededgemedia.com/donate/
 Tags: featured, image, posts, pages
 Requires at least: 3.5.1
@@ -38,7 +38,7 @@ Send them to support@jaggededgemedia.com
 == Changelog ==
 
 = 0.1.0 =
-* Adds the "Featured Image" column in the admin posts and pages list.== Changelog ==
+* Adds the "Featured Image" column in the admin posts and pages list.
 
 == Upgrade Notice ==
 
