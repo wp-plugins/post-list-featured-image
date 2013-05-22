@@ -14,11 +14,11 @@ A plugin that adds the "Featured Image" column in admin posts and pages list.
 
 Finally a simple plugin that adds the "Featured Image" column in admin posts and pages list. It lets the wordpress site owners see which posts or pages have its featured image set. 
 
-Of course, this is mainly intended for use on the Post List page, since most themes require a featured image be set for the excerpt thumbnail image. It doesn't seem like much, and the plugin is truly non-invasive to the rest fo the WP install. But the value that this simple tool can have on the overall organization for Admins and Developers of WordPress websites is priceless.
+Of course, this is mainly intended for use on the Posts List page, since most themes require a featured image be set for the excerpt thumbnail image. It doesn't seem like much, and the plugin is truly non-invasive to the rest fo the WP install. But the value that this simple tool can have on the overall organization for Admins and Developers of WordPress websites is priceless.
 
 == Installation ==
 
-1. **(Recommended)** Install directly from the WP Directory through your admin panel Plugins>Add New>>Search for "Post List Featured Image". Click install under the name, and activate when prompted. 
+1. **(Recommended)** Install directly from the WP Directory through your admin panel Plugins>Add New>>Search for "Posts List Featured Image". Click install under the name, and activate when prompted. 
 
 2. Upload posts-list-featured-image.zip via "wp-admin/plugin-install.php?tab=upload" or if using FTP, unzip
 posts-list-featured-image.zip and upload `/posts-list-featured-image/` directory to the `/wp-content/plugins/`
@@ -27,7 +27,7 @@ directory.
 3. Activate the plugin through the 'Plugins' menu in WordPress (under plugin name:
 **"Posts List Featured Image"**).
 
-4. Find more Installation options at http://jaggededgemedia.com/plugins/post-list-featured-image/
+4. Find more Installation options at http://jaggededgemedia.com/plugins/posts-list-featured-image/
 
 == Frequently Asked Questions ==
 
