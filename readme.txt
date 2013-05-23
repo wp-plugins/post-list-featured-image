@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== NextGEN Gallery Media Library Addon ===
 Contributors: JAkzam, pcgrejaldo
 Donate link: http://jaggededgemedia.com/donate/
 Tags: nextgen gallery, gallery images, media library, adding images, extensions
