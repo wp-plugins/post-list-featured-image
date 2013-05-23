@@ -20,12 +20,9 @@ Now, with our NextGEN Gallery Media Library Addon, you will have the option of a
 
 1. **(Recommended)** Install directly from the WP Directory through your admin panel Plugins>Add New>>Search for "NextGEN Gallery Madia Library Addon". Click install under the name, and activate when prompted. 
 
-2. Upload nextgen-gallery-media-library-addon.zip via "wp-admin/plugin-install.php?tab=upload" or if using FTP, unzip
-nextgen-gallery-media-library-addon.zip and upload `/nextgen-gallery-media-library-addon/` directory to the `/wp-content/plugins/`
-directory.
+2. Upload nextgen-gallery-media-library-addon.zip via "wp-admin/plugin-install.php?tab=upload" or if using FTP, unzip nextgen-gallery-media-library-addon.zip and upload `/nextgen-gallery-media-library-addon/` directory to the `/wp-content/plugins/` directory.
 
-3. Activate the plugin through the 'Plugins' menu in WordPress (under plugin name:
-**"NextGEN Gallery Media Library Addon"**).
+3. Activate the plugin through the 'Plugins' menu in WordPress (under plugin name: **"NextGEN Gallery Media Library Addon"**).
 
 4. Find more Installation options at http://jaggededgemedia.com/plugins/nextgen-gallery-media-library-addon/
 
@@ -53,4 +50,4 @@ Send them to support@jaggededgemedia.com
 == Upgrade Notice ==
 
 = 0.1.1 =
-An Update is Available
+There is a new release
