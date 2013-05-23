@@ -42,10 +42,11 @@ Send them to support@jaggededgemedia.com
 
 == Changelog ==
 
+= 0.1.1 =
+* Fix comments showing through source files.
+
 = 0.1.0 =
 * This plugin adds a feature to NextGEN Gallery Plguin to add an image from the WP Media Library.
-= 0.1.1 =
-* Fix comments showing through source files. 
 
 == Upgrade Notice ==
 
