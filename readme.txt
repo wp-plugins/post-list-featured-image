@@ -4,7 +4,7 @@ Donate link: http://jaggededgemedia.com/donate/
 Tags: nextgen gallery, gallery images, media library, adding images, extensions
 Requires at least: 3.5.1
 Tested up to: 3.5.1
-Stable tag: trunk
+Stable tag: 0.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -47,8 +47,10 @@ Send them to support@jaggededgemedia.com
 
 = 0.1.0 =
 * This plugin adds a feature to NextGEN Gallery Plguin to add an image from the WP Media Library.
+= 0.1.1 =
+* Fix comments showing through source files. 
 
 == Upgrade Notice ==
 
-= 0.1.0 =
-We aim to stay current with the latest release of WordPress. Not upgrading may cause the feature to break if you upgrade your WordPress install.
+= 0.1.1 =
+An Update is Available
