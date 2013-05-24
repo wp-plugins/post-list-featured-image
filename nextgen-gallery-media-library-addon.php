@@ -3,7 +3,7 @@
 Plugin Name: NextGEN Gallery Media Library Addon
 Plugin URI: http://jaggededgemedia.com/plugins/nextgen-gallery-media-library-addon/
 Description: An addon to NextGEN Gallery plugin.
-Version: 0.2.0
+Version: 0.2.1
 Author: Jagged Edge Media
 Author URI: http://jaggededgemedia.com/
  */
@@ -25,7 +25,7 @@ if (!defined('ABSPATH') ||
                                   $_SERVER['PHP_SELF']))
         die("You are not allowed to call this page directly.");
 
-require_once('nggml-class.php');
+require_once('nggmla-class.php');
 
 add_action('plugins_loaded', 'sngg_init');
 function sngg_init() {

@@ -4,7 +4,7 @@ Donate link: http://jaggededgemedia.com/donate/
 Tags: nextgen gallery, gallery images, media library, adding images, extensions
 Requires at least: 3.5.1
 Tested up to: 3.5.1
-Stable tag: 0.2.0
+Stable tag: 0.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -41,6 +41,9 @@ Send them to support@jaggededgemedia.com
 5. Screenshot shows the WP Upload Zip file installation process.
 
 == Changelog ==
+
+= 0.2.1 =
+* -Fix- Some typo and removed unused method.
 
 = 0.2.0 =
 * -Added- Can now search by "Media Tag" in media window.
