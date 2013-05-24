@@ -4,7 +4,7 @@ Donate link: http://jaggededgemedia.com/donate/
 Tags: nextgen gallery, gallery images, media library, adding images, extensions
 Requires at least: 3.5.1
 Tested up to: 3.5.1
-Stable tag: 0.1.1
+Stable tag: 0.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -18,7 +18,7 @@ Now, with our NextGEN Gallery Media Library Addon, you will have the option of a
 
 == Installation ==
 
-1. **(Recommended)** Install directly from the WP Directory through your admin panel Plugins>Add New>>Search for "NextGEN Gallery Madia Library Addon". Click install under the name, and activate when prompted. 
+1. **(Recommended)** Install directly from the WP Directory through your admin panel Plugins > Add New > Search for "NextGEN Gallery Madia Library Addon". Click install under the name, and activate when prompted. 
 
 2. Upload nextgen-gallery-media-library-addon.zip via "wp-admin/plugin-install.php?tab=upload" or if using FTP, unzip nextgen-gallery-media-library-addon.zip and upload `/nextgen-gallery-media-library-addon/` directory to the `/wp-content/plugins/` directory.
 
@@ -42,6 +42,9 @@ Send them to support@jaggededgemedia.com
 
 == Changelog ==
 
+= 0.2.0 =
+* -Added- Can now search by "Media Tag" in media window.
+
 = 0.1.1 =
 * Fix comments showing through source files.
 
@@ -51,4 +54,4 @@ Send them to support@jaggededgemedia.com
 == Upgrade Notice ==
 
 = 0.1.1 =
-There is a new release
+We aim to stay current with the latest release of WordPress. Not upgrading may cause the feature to break if you upgrade your WordPress install.
