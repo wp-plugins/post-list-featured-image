@@ -1,0 +1,81 @@
+/* Post List Featured Image Settings CSS */
+
+.settings-content {
+    width     : 70%;
+    float     : left;
+    max-width : 960px;
+}
+
+/*.hrdivide {
+height: 5px;
+background: #008F9E;
+margin: 40px 0px 20px;
+}*/
+.pro-options {
+    width      : 80%;
+    margin     : 0px auto;
+    border-top : 5px ridge #008F9E;
+}
+
+.pro-options h1 {
+    text-align : center;
+    color      : #008F9E;
+}
+
+.settings-box {
+    min-height : 200px;
+}
+
+#imgsizes {
+    width : 50%;
+    float : left;
+}
+
+#permissions {
+    width : 50%;
+    float : right;
+}
+
+.instr-vid {
+    max-width : 560px;
+    margin    : 0px auto;
+}
+
+#link-btns {
+    text-align : center;
+    margin     : 20px 0px;
+}
+
+.settings-sidebar {
+    background : #E1F4F7;
+    float      : right;
+    width      : 24%;
+    margin     : 20px 10px 0px;
+    text-align : center;
+    padding    : 10px;
+    max-width  : 312px;
+    border     : 5px ridge #008F9E;
+}
+
+.fb_iframe_widget {
+    display    : inline-block;
+    position   : relative;
+    background : #FFF;
+}
+
+.fb_edge_widget_with_comment {
+    position   : relative;
+    background : transparent;
+}
+
+#pro-sup {
+margin-top: 20px;
+}
+
+#pro-sup a {
+font-size: 200%;
+text-decoration: none;
+font-weight: bold;
+padding: 3px;
+box-shadow: 0px 0px 10px;
+}
