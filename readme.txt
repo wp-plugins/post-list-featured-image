@@ -4,7 +4,7 @@ Donate link: http://jaggededgemedia.com/donate/
 Tags: nextgen gallery, gallery images, media library, adding images, extensions
 Requires at least: 3.5.1
 Tested up to: 3.5.1
-Stable tag: 0.2.1
+Stable tag: 0.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -30,7 +30,7 @@ Now, with our NextGEN Gallery Media Library Addon, you will have the option of a
 
 = I have some questions. How do I contact you? =
 
-Send them to support@jaggededgemedia.com
+Post them over at http://wordpress.org/support/plugin/nextgen-gallery-media-library-addon
 
 == Screenshots ==
 
@@ -41,6 +41,10 @@ Send them to support@jaggededgemedia.com
 5. Screenshot shows the WP Upload Zip file installation process.
 
 == Changelog ==
+
+= 0.3.0 =
+* -Added- Image title and description import options
+* -Changed- file_get_contents function call to wp_remote_get
 
 = 0.2.1 =
 * -Fix- Some typo and removed unused method.

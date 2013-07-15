@@ -3,7 +3,7 @@
 Plugin Name: NextGEN Gallery Media Library Addon
 Plugin URI: http://jaggededgemedia.com/plugins/nextgen-gallery-media-library-addon/
 Description: An addon to NextGEN Gallery plugin.
-Version: 0.2.1
+Version: 0.3.0
 Author: Jagged Edge Media
 Author URI: http://jaggededgemedia.com/
  */
@@ -20,14 +20,24 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 */
-if (!defined('ABSPATH') ||
-        preg_match('#' . basename(__FILE__) . '#',
-                                  $_SERVER['PHP_SELF']))
-        die("You are not allowed to call this page directly.");
-
-require_once('nggmla-class.php');
-
-add_action('plugins_loaded', 'sngg_init');
-function sngg_init() {
-    $GLOBALS['nggmla'] = new NextGenGalleryMediaLibraryAddon();
+if ( !defined( 'ABSPATH' ) || preg_match( '#' . basename( __FILE__ ) . '#',
+                                          $_SERVER['PHP_SELF']
+	)
+) {
+	die( "You are not allowed to call this page directly." );
 }
+
+/**
+ * Plugin file constants
+ */
+define( 'NGGMLA_PLUGIN_SLUG', plugin_basename( __FILE__ ) );
+define( 'NGGMLA_PLUGIN_FILE', __FILE__ );
+define( 'NGGMLA_PLUGIN_DIR_PATH', plugin_dir_path( __FILE__ ) );
+define( 'NGGMLA_DOMAIN', basename( dirname( __FILE__ ) ) );
+define( 'NGGMLA_MEDIA_TAGS_QUERYVAR', 'sngg_media_tags' );
+define( 'NGG_PLUGIN', 'nextgen-gallery/nggallery.php' );
+define( 'NGG_PLUGIN_NAME', 'NextGEN Gallery' );
+
+require_once( 'nggmla-class.php' );
+
+add_action( 'plugins_loaded', array( NextGenGalleryMediaLibraryAddon::get_instance(), 'init' ) );
