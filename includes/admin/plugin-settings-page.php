@@ -41,11 +41,11 @@
 			<h1><?php echo $plugin_data['Name']; ?> PRO!</h1>
 
 			<div class="instr-vid">
-				<iframe width="560" height="315" src="http://www.youtube.com/embed/Li-rtW0drq4" frameborder="0" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="//www.youtube.com/embed/gLkq41XwCSI" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<div style="clear:both;"></div>
 			<div id="link-btns">
-				<a href="http://gator.johnnyakzam.com/cart.php" target="_blank">
+				<a href="http://jaggededgemedia.com/pro-plugins-shop/" target="_blank">
 					<img class="aligncenter size-full wp-image-212" alt="Post List Featured Image Pro"
 					     src="http://jaggededgemedia.com/wp-content/uploads/2013/05/go-pro.png" width="300"
 					     height="100" />
