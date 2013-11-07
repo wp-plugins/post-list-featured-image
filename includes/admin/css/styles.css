@@ -3,7 +3,7 @@
 .settings-content {
     width     : 70%;
     float     : left;
-    max-width : 960px;
+    max-width : 940px;
 }
 
 /*.hrdivide {
@@ -47,13 +47,13 @@ margin: 40px 0px 20px;
 }
 
 .settings-sidebar {
-    background : #E1F4F7;
+    background : #FFFFFF;
     float      : right;
-    width      : 24%;
+    width      : 25%;
     margin     : 20px 10px 0px;
     text-align : center;
     padding    : 10px;
-    max-width  : 312px;
+    max-width  : 332px;
     border     : 5px ridge #008F9E;
 }
 
