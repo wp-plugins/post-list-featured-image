@@ -54,7 +54,7 @@
                 ); ?></p></li>
     </ul>
     <p id="pro-sup">
-        <a href="http://gator.johnnyakzam.com/supporttickets.php" target="_blank">
+        <a href="http://jacomsupport.com/" target="_blank">
             <?php _e( 'For Pro Support ONLY', PLFI_DOMAIN ); ?>
         </a>
     </p>
