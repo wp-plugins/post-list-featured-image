@@ -1,0 +1,184 @@
+/* Post List Featured Image Settings CSS */
+
+/* Overview Styles */
+
+.instr-use ul, .help-issues ul, .pro-features ul {
+    list-style  : disc outside;
+    margin-left : 20px;
+}
+
+#link-btns {
+    text-align : center;
+    margin     : 20px 0;
+}
+
+/* End Overview */
+
+/* Settings Tab Style */
+
+.settings-content {
+    width     : 72%;
+    float     : left;
+    max-width : 940px;
+}
+
+.settings-box {
+    min-height : 200px;
+}
+
+#imgsizes {
+    width : 50%;
+    float : left;
+}
+
+#permissions {
+    width : 50%;
+    float : right;
+}
+
+/* End settings Tab */
+
+/* Pro Addon Tab Styles */
+
+.instr-vid {
+    max-width : 560px;
+    margin    : 0 auto;
+}
+
+.pro-options {
+    margin : 0 auto;
+}
+
+.pro-options h1 {
+    text-align : center;
+    color      : #040432;
+}
+
+/* End Pro Addon */
+
+/* Help Tab Styles */
+
+#pro-sup {
+    margin : 40px 0 40px 16px;
+}
+
+#sup-img {
+    transition-property         : opacity;
+    transition-duration         : .5s;
+    -webkit-transition-property : opacity;
+    -webkit-transition-duration : .5s;
+}
+
+#sup-img:hover {
+    opacity : .7;
+}
+
+#pro-sup a {
+    font-size                   : 24px;
+    text-decoration             : none;
+    font-weight                 : bold;
+    padding                     : 8px;
+    border-radius               : 8px;
+    box-shadow                  : #040432 0 0 10px;
+    background                  : #8ED8F8;
+    transition-property         : color;
+    transition-duration         : .5s;
+    -webkit-transition-property : color;
+    -webkit-transition-duration : .5s;
+}
+
+#pro-sup a:hover {
+    color : #F58220;
+}
+
+/* End Help */
+
+/* Sidebar Styles */
+
+.settings-sidebar {
+    background : #FFF;
+    float      : right;
+    width      : 28%;
+    margin     : 0;
+    text-align : center;
+    padding    : 0;
+    max-width  : 312px;
+}
+
+.settings-sidebar aside {
+    background    : #8ED8F8;
+    text-align    : center;
+    padding       : 0 0 10px;
+    border        : 5px solid #040432;
+    border-radius : 15px;
+    margin        : 0 0 10px;
+    border-top    : 5px solid #0095DA;
+}
+
+#set-header {
+    background    : #040432;
+    padding       : 10px 0;
+    border-bottom : 5px solid #0095DA;
+}
+
+.set-widget {
+    padding   : 10px 5px;
+    color     : #000;
+    font-size : 16px;
+}
+
+#side-title {
+    color         : #0095DA;
+    background    : #040432;
+    margin        : 0;
+    border-radius : 10px 10px 0 0;
+    padding       : 6px 0;
+    border-bottom : 2px solid #829BAE;
+    text-shadow   : none;
+    font-weight   : bold;
+}
+
+/* End Sidebar */
+
+#lastside {
+    background : #0095DA;
+}
+
+.fb_iframe_widget {
+    display    : inline-block;
+    position   : relative;
+    background : #FFF;
+}
+
+.fb_edge_widget_with_comment {
+    position   : relative;
+    background : transparent;
+}
+
+/* Tabs Footer Styles */
+
+#settings-footer td {
+    padding    : 10px;
+    text-align : center;
+}
+
+#settings-footer table {
+    width      : 100%;
+    border-top : 5px solid #829BAE;
+    background : #0095DA;
+    color      : #FFF;
+}
+
+#settings-footer a {
+    color           : #FFF;
+    text-decoration : none;
+    font-weight     : bold;
+    font-size       : 20px;
+}
+
+#settings-footer a:hover {
+    color           : #F58220;
+    text-decoration : underline;
+}
+
+/* End Footer */
