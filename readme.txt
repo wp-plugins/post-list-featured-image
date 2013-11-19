@@ -4,7 +4,7 @@ Donate link: http://jaggededgemedia.com/donate/
 Tags: featured, image, posts, pages, developer tools
 Requires at least: 3.5.1
 Tested up to: 3.7.1
-Stable tag: 0.2.1
+Stable tag: 0.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -14,8 +14,13 @@ A plugin that adds the "Featured Image" column in admin posts and pages list.
 
 Finally a simple plugin that adds the "Featured Image" column in admin posts and pages list. It lets the wordpress site owners see which posts or pages have a featured image set. 
 
-Of course, this is mainly intended for use on the Post List page, since most themes require a featured image be set for the excerpt thumbnail image. It doesn't seem like much, and the plugin is truly non-invasive to the rest fo the WP install. But the value that this simple tool can have on the overall organization for Admins and Developers of WordPress websites is priceless.
-By enhancing the plugin with the Pro Addon, you can easily change, add, or remove images with the Quick Edit feature, directly from your Posts List Page.
+Choose between three thumbnail sizes.
+Sort the Post List by Featured Image
+Filter the Post List by Has/Does Not Have Featured Image
+
+Of course, this is mainly intended for use on the Post List page, since most themes require a featured image be set for the excerpt thumbnail image. It doesn't seem like much, and the plugin is truly non-invasive to the rest for the WP install. But the value that this simple tool can have on the overall organization for Admins and Developers of WordPress websites is priceless.
+
+By enhancing the plugin with the Pro Addon, you can easily change, add, or remove images with the **Quick Edit** feature, directly from your Posts List Page, which now includes standard Post Editor Media Library selection. Pro also now supports **Custom Post Type** lists.
 
 == Installation ==
 
@@ -50,6 +55,11 @@ Settings can be reached from the Settings link on the Plugin list page or by goi
 5. Screenshot shows the "Featured Image Settings" menu.
 
 == Changelog ==
+
+= 0.3.0 =
+* Added post type list table filter for posts that have or doesn't have a featured image.
+* Added post type list table sort by featured image id
+* Changed settings page UI
 
 = 0.2.0 =
 * Added "Featured Image Settings" page (Media > Featured Image Settings).
