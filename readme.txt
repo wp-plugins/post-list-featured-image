@@ -4,7 +4,7 @@ Donate link: http://jaggededgemedia.com/donate/
 Tags: featured, image, posts, pages, developer tools
 Requires at least: 3.5.1
 Tested up to: 3.7.1
-Stable tag: 0.3.2
+Stable tag: 0.3.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -55,6 +55,10 @@ Settings can be reached from the Settings link on the Plugin list page or by goi
 5. Screenshot shows the "Featured Image Settings" menu.
 
 == Changelog ==
+
+= 0.3.3 =
+
+*File adjustment
 
 = 0.3.2 =
 * Added default filter field
