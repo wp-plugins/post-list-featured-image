@@ -215,7 +215,8 @@ class PostListFeaturedImage {
         if ( in_array( $typenow, $this->supported_post_types ) ) {
             $post_type = get_post_type_object( $typenow );
             ?>
-            <select class="postform" id="plfi_filter" name="plfi_filter">
+            <select class="postform" id="plfi_filter" name="plfi_filter" style="max-width: 320px;width: auto;">
+            	<option value="default">Show All <?php echo $post_type->label; ?> with|without Featured Images</option>
                 <option value="all">Show All <?php echo $post_type->label; ?> with Featured Image</option>
                 <option value="none">Show All <?php echo $post_type->label; ?> without Featured Image</option>
             </select>
