@@ -3,7 +3,7 @@
 Plugin Name: Post List Featured Image
 Plugin URI: http://jaggededgemedia.com/plugins/post-list-featured-image/
 Description: Adds a featured image column in admin Posts/Pages list.
-Version: 0.3.4
+Version: 0.3.5
 Author: Jagged Edge Media
 Author URI: http://jaggededgemedia.com
 License: GPLv2 or later
@@ -125,6 +125,7 @@ class PostListFeaturedImage {
             add_action( 'admin_menu', array( &$this, 'add_settings_page' ) );
             add_action( 'admin_init', array( &$this, 'register_plugin_settings' ) );
             add_action( 'admin_enqueue_scripts', array( &$this, 'settings_page_scripts' ) );
+            add_action( 'plfi_settings_tab_content', array( &$this, 'settings_tab_content' ) );
 
             add_filter( "plugin_action_links_" . $this->plugin_slug, array( &$this, 'add_settings_link' ) );
 
@@ -216,7 +217,7 @@ class PostListFeaturedImage {
             $post_type = get_post_type_object( $typenow );
             ?>
             <select class="postform" id="plfi_filter" name="plfi_filter" style="max-width: 320px;width: auto;">
-            	<option value="default">Show All <?php echo $post_type->label; ?> with|without Featured Images</option>
+                <option value="default">Show All <?php echo $post_type->label; ?> with|without Featured Images</option>
                 <option value="all">Show All <?php echo $post_type->label; ?> with Featured Image</option>
                 <option value="none">Show All <?php echo $post_type->label; ?> without Featured Image</option>
             </select>
@@ -246,11 +247,11 @@ class PostListFeaturedImage {
                 $query->set(
                       'meta_query',
                       array(
-                           array(
-                               'key'     => '_thumbnail_id',
-                               'value'   => 'not exists',
-                               'compare' => 'NOT EXISTS'
-                           )
+                          array(
+                              'key'     => '_thumbnail_id',
+                              'value'   => 'not exists',
+                              'compare' => 'NOT EXISTS'
+                          )
                       )
                 );
             }
@@ -319,7 +320,84 @@ class PostListFeaturedImage {
      */
     public function render_settings_page() {
         $plugin_data = $this->get_plugin_data();
+
+        $tabs = array(
+            array(
+                'id'    => 'plfi-overview',
+                'label' => __( 'Overview', PLFI_DOMAIN )
+            ),
+            array(
+                'id'    => 'plfi-settings',
+                'label' => __( 'PLFI Settings', PLFI_DOMAIN )
+            ),
+            array(
+                'id'    => 'plfi-pro-option',
+                'label' => __( 'PLFI Pro Addon', PLFI_DOMAIN )
+            ),
+            array(
+                'id'    => 'plfi-help',
+                'label' => __( 'Help & Support', PLFI_DOMAIN )
+            )
+        );
+
+        $tabs = apply_filters( 'plfi_settings_page_tabs', $tabs );
+
         require_once( 'includes/admin/plugin-settings-page.php' );
+    }
+
+    public function settings_tab_content( $tab ) {
+        $readme = null;
+        $readmeParser = null;
+        if ( $tab['id'] === 'plfi-overview' || $tab['id'] === 'plfi-pro-option' ) {
+            if ( !class_exists( 'CustomAutomatticReadme' ) ) {
+                include plugin_dir_path( __FILE__ ) . 'includes/admin/parse-readme.php';
+            }
+
+            $request = file_get_contents( plugin_dir_path( __FILE__ ) . 'readme.txt' );
+            if ( !empty( $request ) && !is_wp_error( $request ) ) {
+                $readmeParser = new CustomAutomatticReadme;
+
+                $readme = $readmeParser->parse_readme_contents( $request );
+            }
+        }
+
+        switch ( $tab['id'] ) {
+            case 'plfi-overview':
+                ?>
+                <div id="plfi-overview">
+                    <?php include plugin_dir_path( __FILE__ ) . 'includes/admin/overview-tab.php'; ?>
+                </div>
+                <?php
+                break;
+            case 'plfi-settings':
+                ?>
+                <div id="plfi-settings" class="settings-box">
+                    <form id="plfi-settings-form" action="options.php" method="post">
+                        <?php settings_fields( 'plfi_plugin_settings' ); ?>
+                        <?php do_settings_sections( 'plfi-plugin-settings-section' ); ?>
+                        <?php submit_button(); ?>
+                    </form>
+                    <div style="clear:both;"></div>
+                </div>
+                <?php
+                break;
+            case 'plfi-pro-option':
+                ?>
+                <div id="plfi-pro-option" class="pro-options">
+                    <?php include plugin_dir_path( __FILE__ ) . 'includes/admin/addon-tab.php'; ?>
+                </div>
+                <?php
+                break;
+            case 'plfi-help':
+                ?>
+                <div id="plfi-help">
+                    <?php include plugin_dir_path( __FILE__ ) . 'includes/admin/help-tab.php'; ?>
+                </div>
+                <?php
+                break;
+            default:
+                do_action( 'plfi_settings_tab_content_html', $tab );
+        }
     }
 
     /**

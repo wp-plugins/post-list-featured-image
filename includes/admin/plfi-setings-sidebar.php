@@ -7,9 +7,8 @@
 <aside id="set-header">
     <div class="set-widget">
         <a href="http://jaggededgemedia.com/plugins/" target="_blank">
-            <img class="aligncenter  wp-image-121" title="Jagged Edge Media - Plugins" alt="Jagged Edge Media - Plugins"
-                 src="http://jaggededgemedia.com/wp-content/uploads/2013/05/cropped-logo-icon-lg-300x60.png" width="292"
-                 height="70"/>
+            <img class="aligncenter  wp-image-121" id="jem-logo" title="Jagged Edge Media - Plugins" alt="Jagged Edge Media - Plugins"
+                 src="http://jaggededgemedia.com/wp-content/uploads/2013/05/cropped-logo-icon-lg-300x60.png" />
         </a>
 
         <div style="clear:both;"></div>
@@ -38,8 +37,8 @@
     <h2 id="side-title"><?php _e( 'Join Us on Facebook', PLFI_DOMAIN ); ?></h2>
 
     <div class="set-widget">
-        <div class="fb-like-box" data-href="http://www.facebook.com/jaggededgemedia" data-width="292" data-height="592"
-             data-show-faces="true" data-stream="true" data-show-border="false" data-header="false"></div>
+        <div class="fb-like-box" data-href="http://www.facebook.com/jaggededgemedia" data-width="98%" data-height="auto"
+             data-show-faces="true" data-stream="false" data-show-border="false" data-header="false"></div>
     </div>
 </aside>
 <aside id="lastside">

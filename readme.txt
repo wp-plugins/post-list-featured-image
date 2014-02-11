@@ -3,8 +3,8 @@ Contributors: JAkzam, pcgrejaldo
 Donate link: http://jaggededgemedia.com/donate/
 Tags: featured, image, posts, pages, developer tools
 Requires at least: 3.5.1
-Tested up to: 3.8
-Stable tag: 0.3.4
+Tested up to: 3.8.1
+Stable tag: 0.3.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -54,11 +54,41 @@ Settings can be reached from the Settings link on the Plugin list page or by goi
 4. Screenshot shows the WP Upload Zip file installation process.
 5. Screenshot shows the "Featured Image Settings" menu.
 
+== Instructions and Usage ==
+* **Thumbnail Size**
+
+Choose between 50px, 100px and 150px
+
+* **Sorting by Featured Image**
+
+On the Post/Page list pages of the Admin area, click on the Featured Image column heading to sort by Featured Image ID.
+
+* **Filtering by Featured Image**
+
+On the Post/Page list pages of the Admin area, Choose to Filter the posts by "Show All Posts with Featured Image" or "Show All Posts without Featured Image"
+
+This is especially helpful for assigning new featured image to posts that do not have them. Or this helps with large sites, with many posts, and editing the post featured images for those posts using the "Quick Edit" feature, available with the **Pro Addon**
+
+*Please remember, if you do not see the Featured Image column in your Post/Page Lists to click on "Screen Options" in the upper right corner, and tick the box for Featured Image.*
+
+== Pro Features ==
+* Set featured images in *QUICK EDIT* mode
+* Custom post type support
+* *NEW* Auto set the first image of a post as featured image in *QUICK EDIT* mode
+* *NEW* Auto set the first image of a post as featured image by *post type*
+
 == Changelog ==
+
+= 0.3.5 =
+* compatibility: tested with WP 3.8.1
+* moved: tabs html into a hook
+
+= 0.3.4 =
+* changed: settings page styles and layout
 
 = 0.3.3 =
 
-*File adjustment
+* File adjustment
 
 = 0.3.2 =
 * Added default filter field

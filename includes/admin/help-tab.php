@@ -2,6 +2,13 @@
 /*
 * Basic HTML for Pro Addon Tab
 */
+if ( !defined( 'ABSPATH' ) || preg_match(
+        '#' . basename( __FILE__ ) . '#',
+        $_SERVER['PHP_SELF']
+    )
+) {
+    die( "You are not allowed to call this page directly." );
+}
 ?>
 <div class="help-issues">
     <h1><?php _e( 'Experiencing Issues?', PLFI_DOMAIN ); ?></h1>
@@ -18,17 +25,24 @@
             '<a href="http://wordpress.org/support/plugin/post-list-featured-image" target="_blank">Plugin Forum</a>'
         ); ?>
     </p>
-
+     <p>
+        <?php
+        printf(
+            __(
+     		'<a href="http://wordpress.org/support/plugin/post-list-featured-image" target="_blank">
+       		<img class="aligncenter" id="sup-img" alt="Basic Support" ' .
+                'src="http://jaggededgemedia.com/wp-content/uploads/2013/05/support-btn.png" ' .
+                'width="273" height="100"/></a>'
+ 	    )
+        );
+        ?>
+    </p>
     <p>
         <?php
         printf(
             __(
                 '<b>*</b><em>Please <b>NOTE:</b> The WordPress Plugin Support forum for Post List Featured Image ' .
-                'is <b>ONLY</b> for the <b>FREE</b> version.</em> ' .
-                '<a href="http://wordpress.org/support/plugin/post-list-featured-image" target="_blank">
-        <img class="aligncenter" id="sup-img" alt="Basic Support" ' .
-                'src="http://jaggededgemedia.com/wp-content/uploads/2013/05/support-btn.png" ' .
-                'width="273" height="100"/></a>'
+                'is <b>ONLY</b> for the <b>FREE</b> version.</em> '
             )
         );
         ?>

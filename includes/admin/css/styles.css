@@ -1,5 +1,16 @@
 /* Post List Featured Image Settings CSS */
 
+.ui-state-active a,
+.ui-state-hover a,
+.ui-state-visited a,
+.ui-state-focus a {
+    outline : none;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    background : #F5F5F5;
+}
+
 /* Overview Styles */
 
 .instr-use ul, .help-issues ul, .pro-features ul {
@@ -16,10 +27,9 @@
 
 /* Settings Tab Style */
 
-.settings-content {
-    width     : 72%;
-    float     : left;
-    max-width : 940px;
+.instr-inner {
+    width : 66%;
+    float : left;
 }
 
 .settings-box {
@@ -95,8 +105,12 @@
 
 /* Sidebar Styles */
 
+#jem-logo {
+    width : 98% !important;
+}
+
 .settings-sidebar {
-    background : #FFF;
+    background : transparent;
     float      : right;
     width      : 28%;
     margin     : 0;
@@ -138,22 +152,25 @@
     font-weight   : bold;
 }
 
-/* End Sidebar */
-
 #lastside {
     background : #0095DA;
 }
 
-.fb_iframe_widget {
-    display    : inline-block;
-    position   : relative;
-    background : #FFF;
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget iframe {
+    width : 98% !important;
 }
 
 .fb_edge_widget_with_comment {
     position   : relative;
     background : transparent;
 }
+
+#af-form-1831010845, #af-form-1831010845 .quirksMode {
+    max-width : 292px !important;
+    width     : 98% !important;
+}
+
+/* End Sidebar */
 
 /* Tabs Footer Styles */
 
@@ -182,3 +199,29 @@
 }
 
 /* End Footer */
+
+/* Mobile Screen Settings */
+
+@media only screen and (max-width : 640px) {
+
+    #jem-logo {
+        width     : 98% !important;
+        max-width : 230px;
+    }
+
+    .instr-inner {
+        width : 100%;
+        float : none;
+        clear : both;
+    }
+
+    .settings-sidebar {
+        background : transparent;
+        float      : none;
+        width      : 100%;
+        margin     : 0;
+        text-align : center;
+        padding    : 0;
+        max-width  : 312px;
+    }
+}
