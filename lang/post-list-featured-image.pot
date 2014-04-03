@@ -1,0 +1,167 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Post List Featured Image 0.3.6\n"
+"POT-Creation-Date: 2014-04-03 17:51+0800\n"
+"PO-Revision-Date: 2014-04-03 17:51+0800\n"
+"Last-Translator: Jelena Kovacevic <jecajeca260@gmail.com>\n"
+"Language-Team: Jagged Edge Media <support@jaggededgemedia.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: includes\n"
+
+#: includes/admin/addon-tab.php:23
+#, php-format
+msgid "<h2>Pro Addon Features:</h2>%s"
+msgstr ""
+
+#: includes/admin/help-tab.php:14
+msgid "Experiencing Issues?"
+msgstr ""
+
+#: includes/admin/help-tab.php:16
+msgid "JEM Help and Support"
+msgstr ""
+
+#: includes/admin/help-tab.php:20
+#, php-format
+msgid ""
+"If you are experiencing issues with the Free version of the Plugin, that can "
+"be downloaded through the %s, please use the WP %s by clicking on the "
+"Support Button below."
+msgstr ""
+
+#: includes/admin/help-tab.php:36
+msgid "Basic Support"
+msgstr ""
+
+#: includes/admin/help-tab.php:45
+msgid ""
+"<b>*</b><em>Please <b>NOTE:</b> The WordPress Plugin Support forum for Post "
+"List Featured Image is <b>ONLY</b> for the <b>FREE</b> version.</em> "
+msgstr ""
+
+#: includes/admin/help-tab.php:54
+msgid "Pro Support Only"
+msgstr ""
+
+#: includes/admin/help-tab.php:56
+msgid "The following link is <b>ONLY</b> for Pro Support. Use this if:"
+msgstr ""
+
+#: includes/admin/help-tab.php:59
+msgid ""
+"You have purchased any <b><a href=\"http://jaggededgemedia.com/pro-plugins-"
+"shop/\" target=\"_blank\">Pro Addons</a></b> from us,"
+msgstr ""
+
+#: includes/admin/help-tab.php:62
+msgid "<b>AND</b> you have any issues with the Pro Version"
+msgstr ""
+
+#: includes/admin/help-tab.php:64
+msgid ""
+"<b>OR</b> you have any issues with the Pro <b>AND/OR</b> the FREE Version"
+msgstr ""
+
+#: includes/admin/help-tab.php:68
+msgid ""
+"We will answer any support issues for our Pro users, through the following "
+"link"
+msgstr ""
+
+#: includes/admin/help-tab.php:74
+msgid "For Pro Support ONLY"
+msgstr ""
+
+#: includes/admin/overview-tab.php:15
+msgid "SEE WHAT'S NEW IN THE PRO VERSION!"
+msgstr ""
+
+#: includes/admin/overview-tab.php:19
+#, php-format
+msgid "<h3>Instructions and Usage:</h3>%s"
+msgstr ""
+
+#: includes/admin/overview-tab.php:22
+#, php-format
+msgid "<h3>Changelog:</h3>%s"
+msgstr ""
+
+#: includes/admin/plfi-setings-sidebar.php:20
+msgid "Twitter Updates"
+msgstr ""
+
+#: includes/admin/plfi-setings-sidebar.php:37
+msgid "Join Us on Facebook"
+msgstr ""
+
+#: includes/admin/plfi-setings-sidebar.php:45
+msgid "Get Notified"
+msgstr ""
+
+#: includes/admin/plugin-settings-page.php:32
+#, php-format
+msgid "%s Settings"
+msgstr ""
+
+#: includes/admin/plugin-settings-page.php:35
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: post-list-featured-image.php:162
+msgid "Featured Image"
+msgstr ""
+
+#: post-list-featured-image.php:221
+#, php-format
+msgid "Show All %s with|without Featured Images"
+msgstr ""
+
+#: post-list-featured-image.php:225
+#, php-format
+msgid "Show All %s with Featured Image"
+msgstr ""
+
+#: post-list-featured-image.php:229
+#, php-format
+msgid "Show All %s without Featured Image"
+msgstr ""
+
+#: post-list-featured-image.php:278
+msgid "Settings"
+msgstr ""
+
+#: post-list-featured-image.php:291
+msgid "Featured Image Settings"
+msgstr ""
+
+#: post-list-featured-image.php:336
+msgid "Overview"
+msgstr ""
+
+#: post-list-featured-image.php:340
+msgid "Main Settings"
+msgstr ""
+
+#: post-list-featured-image.php:344
+msgid "PLFI Pro Addon"
+msgstr ""
+
+#: post-list-featured-image.php:348
+msgid "Help & Support"
+msgstr ""
+
+#: post-list-featured-image.php:424
+msgid "Featured Image Thumbnail Size"
+msgstr ""
+
+#: post-list-featured-image.php:430
+msgid "Thumbnail Size"
+msgstr ""

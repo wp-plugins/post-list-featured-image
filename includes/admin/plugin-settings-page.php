@@ -29,7 +29,7 @@ if ( !defined( 'ABSPATH' ) || preg_match(
 </script>
 <div class="wrap">
     <div class="settings-content">
-        <h2><?php echo $plugin_data['Name']; ?> Settings</h2>
+        <h2><?php printf( __( '%s Settings', PLFI_DOMAIN ), $plugin_data['Name'] ); ?></h2>
         <?php
         if (!current_user_can( 'manage_options' )) {
             wp_die( __( 'You do not have sufficient permissions to access this page.', PLFI_DOMAIN ) );

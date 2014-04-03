@@ -51,7 +51,7 @@
 /* Pro Addon Tab Styles */
 
 .instr-vid {
-    max-width : 560px;
+    max-width : 853px;
     margin    : 0 auto;
 }
 
@@ -200,6 +200,14 @@
 
 /* End Footer */
 
+#tools-p {
+	font-weight: bold;
+	font-size: 14px;
+}
+#select-ptypes {
+	font-weight: bold;
+	color: #CC0000;
+}
 /* Mobile Screen Settings */
 
 @media only screen and (max-width : 640px) {

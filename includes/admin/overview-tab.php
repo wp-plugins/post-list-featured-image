@@ -12,6 +12,7 @@ if ( !defined( 'ABSPATH' ) || preg_match(
 ?>
 <div class="instr-use">
     <div class="instr-inner">
+        <div id="pro-notice"><?php _e( "SEE WHAT'S NEW IN THE PRO VERSION!", PLFI_DOMAIN ); ?></div>
         <?php
         if ( !empty( $readme ) ) {
             printf(

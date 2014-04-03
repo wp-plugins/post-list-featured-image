@@ -7,8 +7,7 @@
 <h1><?php echo $plugin_data['Name']; ?> PRO!</h1>
 
 <div class="instr-vid">
-    <iframe width="560" height="315" src="//www.youtube.com/embed/7RaZmPWODfY" frameborder="0"
-            allowfullscreen></iframe>
+    <iframe width="853" height="480" src="//www.youtube.com/embed/7U9qeSbL_ys" frameborder="0" allowfullscreen></iframe>
 </div>
 <div style="clear:both;"></div>
 <div id="link-btns">

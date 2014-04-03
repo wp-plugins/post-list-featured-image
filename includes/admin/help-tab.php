@@ -25,24 +25,26 @@ if ( !defined( 'ABSPATH' ) || preg_match(
             '<a href="http://wordpress.org/support/plugin/post-list-featured-image" target="_blank">Plugin Forum</a>'
         ); ?>
     </p>
-     <p>
+
+    <p>
         <?php
         printf(
-            __(
-     		'<a href="http://wordpress.org/support/plugin/post-list-featured-image" target="_blank">
-       		<img class="aligncenter" id="sup-img" alt="Basic Support" ' .
-                'src="http://jaggededgemedia.com/wp-content/uploads/2013/05/support-btn.png" ' .
-                'width="273" height="100"/></a>'
- 	    )
+            '<a href="http://wordpress.org/support/plugin/post-list-featured-image" target="_blank">
+                  <img class="aligncenter" id="sup-img" alt="%s" ' .
+            'src="http://jaggededgemedia.com/wp-content/uploads/2013/05/support-btn.png" ' .
+            'width="273" height="100"/></a>',
+            __( 'Basic Support', PLFI_DOMAIN )
         );
         ?>
     </p>
+
     <p>
         <?php
         printf(
             __(
                 '<b>*</b><em>Please <b>NOTE:</b> The WordPress Plugin Support forum for Post List Featured Image ' .
-                'is <b>ONLY</b> for the <b>FREE</b> version.</em> '
+                'is <b>ONLY</b> for the <b>FREE</b> version.</em> ',
+                PLFI_DOMAIN
             )
         );
         ?>

@@ -3,7 +3,7 @@
 Plugin Name: Post List Featured Image
 Plugin URI: http://jaggededgemedia.com/plugins/post-list-featured-image/
 Description: Adds a featured image column in admin Posts/Pages list.
-Version: 0.3.5
+Version: 0.3.6
 Author: Jagged Edge Media
 Author URI: http://jaggededgemedia.com
 License: GPLv2 or later
@@ -39,7 +39,7 @@ if ( !defined( 'ABSPATH' ) || preg_match(
     die( "You are not allowed to call this page directly." );
 }
 
-define( 'PLFI_DOMAIN', basename( dirname( __FILE__ ) ) );
+define( 'PLFI_DOMAIN', dirname( plugin_basename( __FILE__ ) ) );
 
 class PostListFeaturedImage {
 
@@ -111,7 +111,7 @@ class PostListFeaturedImage {
      * Initialize plugin
      */
     public function init() {
-        load_plugin_textdomain( PLFI_DOMAIN, false, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
+        load_plugin_textdomain( PLFI_DOMAIN, false, PLFI_DOMAIN . '/lang/' );
 
         if ( function_exists( 'add_theme_support' ) ) {
             $options                    = get_option( $this->plugin_options_key );
@@ -181,7 +181,7 @@ class PostListFeaturedImage {
      * Display post/page featured image.
      *
      * @param $column_name string Current column in the loop.
-     * @param $id          Current post id in the loop.
+     * @param $id          int Current post id in the loop.
      */
     public function posts_custom_columns( $column_name, $id ) {
         if ( $column_name === $this->column_slug ) {
@@ -217,9 +217,18 @@ class PostListFeaturedImage {
             $post_type = get_post_type_object( $typenow );
             ?>
             <select class="postform" id="plfi_filter" name="plfi_filter" style="max-width: 320px;width: auto;">
-                <option value="default">Show All <?php echo $post_type->label; ?> with|without Featured Images</option>
-                <option value="all">Show All <?php echo $post_type->label; ?> with Featured Image</option>
-                <option value="none">Show All <?php echo $post_type->label; ?> without Featured Image</option>
+                <option value="default"><?php printf(
+                        __( 'Show All %s with|without Featured Images', PLFI_DOMAIN ),
+                        $post_type->label
+                    ); ?></option>
+                <option value="all"><?php printf(
+                        __( 'Show All %s with Featured Image', PLFI_DOMAIN ),
+                        $post_type->label
+                    ); ?></option>
+                <option value="none"><?php printf(
+                        __( 'Show All %s without Featured Image', PLFI_DOMAIN ),
+                        $post_type->label
+                    ); ?></option>
             </select>
         <?php
         }
@@ -328,7 +337,7 @@ class PostListFeaturedImage {
             ),
             array(
                 'id'    => 'plfi-settings',
-                'label' => __( 'PLFI Settings', PLFI_DOMAIN )
+                'label' => __( 'Main Settings', PLFI_DOMAIN )
             ),
             array(
                 'id'    => 'plfi-pro-option',
@@ -346,7 +355,7 @@ class PostListFeaturedImage {
     }
 
     public function settings_tab_content( $tab ) {
-        $readme = null;
+        $readme       = null;
         $readmeParser = null;
         if ( $tab['id'] === 'plfi-overview' || $tab['id'] === 'plfi-pro-option' ) {
             if ( !class_exists( 'CustomAutomatticReadme' ) ) {
@@ -412,13 +421,13 @@ class PostListFeaturedImage {
         /* THUMBNAIL SIZE OPTIONS */
         add_settings_section(
             'featured_image_thumb_size',
-            'Featured Image Thumbnail Size',
+            __( 'Featured Image Thumbnail Size', PLFI_DOMAIN ),
             '__return_false',
             'plfi-plugin-settings-section'
         );
         add_settings_field(
             'thumb_size',
-            'Thumbnail Size',
+            __( 'Thumbnail Size', PLFI_DOMAIN ),
             array( &$this, 'plfi_plugin_settings_fields' ),
             'plfi-plugin-settings-section',
             'featured_image_thumb_size',
@@ -467,6 +476,8 @@ class PostListFeaturedImage {
         if ( empty( $input['thumb_size'] ) ) {
             $input['thumb_size'] = 100;
         }
+
+        $input = apply_filters( 'plfi_settings_validate', $input );
 
         return $input;
     }
