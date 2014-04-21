@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Post List Featured Image 0.3.6\n"
-"POT-Creation-Date: 2014-04-03 17:51+0800\n"
-"PO-Revision-Date: 2014-04-03 17:51+0800\n"
-"Last-Translator: Jelena Kovacevic <jecajeca260@gmail.com>\n"
+"Project-Id-Version: Post List Featured Image 0.3.8\n"
+"POT-Creation-Date: 2014-04-21 11:46+0800\n"
+"PO-Revision-Date: 2014-04-21 11:48+0800\n"
+"Last-Translator: Paul Christopher Grejaldo <pcgrejaldo@gmail.com>\n"
 "Language-Team: Jagged Edge Media <support@jaggededgemedia.com>\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
@@ -158,10 +158,10 @@ msgstr ""
 msgid "Help & Support"
 msgstr ""
 
-#: post-list-featured-image.php:424
+#: post-list-featured-image.php:410
 msgid "Featured Image Thumbnail Size"
 msgstr ""
 
-#: post-list-featured-image.php:430
+#: post-list-featured-image.php:416
 msgid "Thumbnail Size"
 msgstr ""

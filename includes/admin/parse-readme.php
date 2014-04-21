@@ -80,7 +80,7 @@ class CustomAutomatticReadme {
 
         // Donate Link: URL
         if ( preg_match( '|Donate link:(.*)|i', $file_contents, $_donate_link ) ) {
-            $donate_link = clean_url( $_donate_link[1] );
+            $donate_link = esc_url( $_donate_link[1] );
         } else {
             $donate_link = null;
         }
@@ -94,7 +94,7 @@ class CustomAutomatticReadme {
 
         // License URI: URL
         if ( preg_match( '|License URI:(.*)|i', $file_contents, $_license_uri ) ) {
-            $license_uri = clean_url( $_license_uri[1] );
+            $license_uri = esc_url( $_license_uri[1] );
         } else {
             $license_uri = null;
         }
@@ -294,7 +294,7 @@ class CustomAutomatticReadme {
 
     function sanitize_text( $text ) { // not fancy
         $text = strip_tags( $text );
-        $text = wp_specialchars( $text );
+        $text = esc_html( $text );
         $text = trim( $text );
 
         return $text;
