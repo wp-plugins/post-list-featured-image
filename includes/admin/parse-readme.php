@@ -201,8 +201,8 @@ class CustomAutomatticReadme {
 
         // Parse the upgrade_notice section specially:
         // 1.0 => blah, 1.1 => fnord
+	    $upgrade_notice = array();
         if ( isset( $final_sections['upgrade_notice'] ) ) {
-            $upgrade_notice = array();
             $split          = preg_split(
                 '#<h4>(.*?)</h4>#',
                 $final_sections['upgrade_notice'],

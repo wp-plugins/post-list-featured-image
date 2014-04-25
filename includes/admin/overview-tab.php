@@ -22,7 +22,7 @@ if ( !defined( 'ABSPATH' ) || preg_match(
             printf( __( '<h3>Changelog:</h3>%s', PLFI_DOMAIN ), $readme['sections']['changelog'] );
         }
 
-        do_action( 'plfi_usage_instructions', $readmeParser, $readme );
+        do_action( 'plfi_usage_instructions', $readme );
         ?>
     </div>
     <div class="settings-sidebar">

@@ -4,7 +4,7 @@ Donate link: http://jaggededgemedia.com/donate/
 Tags: featured, image, posts, pages, developer tools
 Requires at least: 3.5.1
 Tested up to: 3.9
-Stable tag: 0.3.8
+Stable tag: 0.3.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -78,6 +78,10 @@ This is especially helpful for assigning new featured image to posts that do not
 * *NEW* Auto set the first image of a post as featured image by *post type*
 
 == Changelog ==
+
+= 0.3.9 =
+* changed: hook plfi_usage_instructions args
+* fixed: undefined variable 'upgrade_notice'
 
 = 0.3.8 =
 * changed: deprecated functions in parse-readme.php
