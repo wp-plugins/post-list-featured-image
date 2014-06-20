@@ -148,7 +148,7 @@
 .set-widget {
 	padding   : 10px 5px;
 	color     : #000;
-	font-size : 16px;
+	font-size : 14px;
 }
 
 #side-title {
@@ -159,11 +159,12 @@
 	padding       : 6px 0;
 	border-bottom : 2px solid #829BAE;
 	text-shadow   : none;
+	text-align    : center;
 	font-weight   : bold;
 }
 
 #lastside {
-	background : #0095DA;
+	text-align : left;
 }
 
 .fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget iframe {
@@ -217,7 +218,7 @@
 
 #select-ptypes {
 	font-weight : bold;
-	color       : #CC0000;
+	color       : #C00;
 }
 
 /* Mobile Screen Settings */

@@ -37,14 +37,41 @@
     <h2 id="side-title"><?php _e( 'Join Us on Facebook', PLFI_DOMAIN ); ?></h2>
 
     <div class="set-widget">
-        <div class="fb-like-box" data-href="http://www.facebook.com/jaggededgemedia" data-width="98%" data-height="auto"
+        <div class="fb-like-box" data-href="http://www.facebook.com/jaggededgemedia" data-width="98%" data-height="304"
              data-show-faces="true" data-stream="false" data-show-border="false" data-header="false"></div>
     </div>
 </aside>
 <aside id="lastside">
-    <h2 id="side-title"><?php _e( 'Get Notified', PLFI_DOMAIN ); ?></h2>
+    <h2 id="side-title"><?php _e( 'JEM News Update', PLFI_DOMAIN ); ?></h2>
 
     <div class="set-widget">
-        <script type="text/javascript" src="http://forms.aweber.com/form/45/1831010845.js"></script>
+        <!--<script type="text/javascript" src="http://forms.aweber.com/form/45/1831010845.js"></script>-->
+	    <?php
+	    /**
+	     * @var SimplePie $jem_news_feed
+	     * @var SimplePie $item
+	     */
+	    $jem_news_feed = fetch_feed( 'http://jaggededgemedia.com/feed' );
+	    if ( !is_wp_error( $jem_news_feed ) ) {
+		    $max_items = $jem_news_feed->get_item_quantity( 5 );
+		    $news_items = $jem_news_feed->get_items( 0, $max_items );
+		    
+		    if ( $max_items > 0 ) {
+			    ?>
+			    <ul>
+				    <?php
+				    foreach ( $news_items as $item ) {
+					    printf( '<li><a href="%s">%s</a></li>', esc_url( $item->get_permalink() ), esc_html( $item->get_title() ) );
+				    }
+				    ?>
+			    </ul>
+		    <?php
+		    } else {
+			    _e( '<p>No items fetched from feed. You may visit <a href="http://jaggededgemedia.com/">Jagged Edge Media site</a> to check on our latest news.</p>', PLFI_DOMAIN );
+		    }
+	    } else {
+		    _e( '<p>Error fetching feed...</p>', PLFI_DOMAIN );
+	    }
+	    ?>
     </div>
 </aside>
