@@ -3,7 +3,7 @@
 Plugin Name: Post List Featured Image
 Plugin URI: http://jaggededgemedia.com/blog/post-list-featured-image/
 Description: Adds a featured image column in admin Posts/Pages list.
-Version: 0.5.0
+Version: 0.5.1
 Author: Jagged Edge Media
 Author URI: http://jaggededgemedia.com/
 License: GPL v2 or later

@@ -79,6 +79,11 @@ This is especially helpful for assigning new featured image to posts that do not
 
 == Changelog ==
 
+= 0.5.1 =
+fixed: undefined index thumb_size
+fixed: incorrect domain
+updated: POT file
+
 = 0.5.0 =
 * code overhaul: requires at least PHP 5.3.0
 * added: [featured_img] shortcode
