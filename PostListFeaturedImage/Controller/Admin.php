@@ -220,7 +220,7 @@ class Admin {
 					}
 					printf(
 						'<div class="desc">%s</div>',
-						__( 'The size of the featured image preview in post list table.', PLFI_PRO_DOMAIN )
+						__( 'The size of the featured image preview in post list table.', PLFI_DOMAIN )
 					);
 					break;
 			}
