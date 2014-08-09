@@ -205,8 +205,8 @@ class Admin {
 				case 'thumb_size':
 					$sizes = array( 150, $this->default_thumb_size, 50 );
 					foreach ( $sizes as $size ) {
-						if ( ( $this->plugin_options['thumb_size'] && $this->plugin_options['thumb_size'] == $size ) ||
-						     ( !$this->plugin_options['thumb_size'] && $size == $this->default_thumb_size )
+						if ( ( isset( $this->plugin_options['thumb_size'] ) && $this->plugin_options['thumb_size'] == $size ) ||
+						     ( !isset( $this->plugin_options['thumb_size'] ) && $size == $this->default_thumb_size )
 						) {
 							$checked = ' checked="checked"';
 						} else {
