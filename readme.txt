@@ -4,7 +4,7 @@ Donate link: http://jaggededgemedia.com/donate/
 Tags: featured, image, posts, pages, developer tools
 Requires at least: WP 3.5.1, PHP 5.3.0
 Tested up to: 3.9.1
-Stable tag: trunk
+Stable tag: 0.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
