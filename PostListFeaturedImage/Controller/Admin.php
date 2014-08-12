@@ -68,11 +68,9 @@ class Admin {
 	}
 
 	public function activation_actions() {
-
 	}
 
 	public function deactivation_actions() {
-
 	}
 
 	protected function action_hooks() {
@@ -234,7 +232,6 @@ class Admin {
 	 *
 	 * @param null  $obj  Unused
 	 * @param array $args Arguments passed when calling add_meta_box
-	 *
 	 */
 	public function admin_page_meta_boxes( $obj = null, $args = array() ) {
 		extract( $args );
@@ -312,17 +309,21 @@ class Admin {
 		);
 
 		if ( !Helper::is_plugin_active( 'plfi-pro-addon/plfi-pro-addon.php' ) ) {
-			array_unshift( $main_metaboxes,
-			               array(
-				               'id'            => 'go_pro',
-				               'title'         => __( 'Want more features? Get more control in the Pro Addon!',
-				                                      PLFI_DOMAIN ),
-				               'callback'      => array( $this, 'admin_page_meta_boxes' ),
-				               'screen'        => 'post_list_featured_image_dashboard_main',
-				               'context'       => 'left',
-				               'priority'      => 'core',
-				               'callback_args' => array( 'box' => 'go_pro' )
-			               ) );
+			array_unshift(
+				$main_metaboxes,
+				array(
+					'id'            => 'go_pro',
+					'title'         => __(
+						'Want more features? Get more control in the Pro Addon!',
+						PLFI_DOMAIN
+					),
+					'callback'      => array( $this, 'admin_page_meta_boxes' ),
+					'screen'        => 'post_list_featured_image_dashboard_main',
+					'context'       => 'left',
+					'priority'      => 'core',
+					'callback_args' => array( 'box' => 'go_pro' )
+				)
+			);
 		}
 
 		return apply_filters( 'plfi_admin_page_main_meta_boxes', $main_metaboxes );
@@ -467,6 +468,9 @@ class Admin {
 	 */
 	public function add_settings_link( $links ) {
 		$plugin_settings_link = '<a href="upload.php?page=plfi-settings">' . __( 'Settings' ) . '</a>';
+		$links = !empty( $links )
+			? $links
+			: array();
 		array_unshift( $links, $plugin_settings_link );
 
 		return $links;
@@ -474,6 +478,9 @@ class Admin {
 
 	public function add_network_settings_link( $links ) {
 		$plugin_settings_link = '<a href="settings.php?page=plfi-settings">' . __( 'Settings' ) . '</a>';
+		$links = !empty( $links )
+			? $links
+			: array();
 		array_unshift( $links, $plugin_settings_link );
 
 		return $links;
