@@ -19,10 +19,6 @@ class Post_List_Featured_Image_Loader {
 		add_action( 'plugins_loaded', array( \PostListFeaturedImage\Controller\Front::instance(), 'init' ) );
 	}
 
-	public static function load_plugin_textdomain() {
-		load_plugin_textdomain( PLFI_DOMAIN, false, PLFI_DOMAIN . '/languages' );
-	}
-
 	public static function autoload( $class ) {
 		if ( 'PostListFeaturedImage' !== mb_substr( $class, 0, 21 ) ) {
 			return;
