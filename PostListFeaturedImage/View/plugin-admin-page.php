@@ -33,23 +33,26 @@ if ( !defined( 'ABSPATH' ) || preg_match(
 			<div id="post-body">
 				<div id="dashboard-widgets-main-content">
 					<div id="main-container" class="postbox-container" style="width: 75%;">
-						<div id="tabs">
-							<ul>
+						<?php if ( !empty( $tabs ) ) { ?>
+							<div id="tabs">
+								<ul>
+									<?php foreach ( $tabs as $tab ) : ?>
+										<?php if ( !empty( $tab['template'] ) ) : ?>
+											<li><a href="<?php echo $tab['href']; ?>"><?php echo $tab['title']; ?></a>
+											</li>
+										<?php endif; ?>
+									<?php endforeach; ?>
+								</ul>
+
 								<?php foreach ( $tabs as $tab ) : ?>
 									<?php if ( !empty( $tab['template'] ) ) : ?>
-										<li><a href="<?php echo $tab['href']; ?>"><?php echo $tab['title']; ?></a></li>
+										<div id="<?php echo $tab['id'] ?>">
+											<?php include_once( $tab['template'] ); ?>
+										</div>
 									<?php endif; ?>
 								<?php endforeach; ?>
-							</ul>
-
-							<?php foreach ( $tabs as $tab ) : ?>
-								<?php if ( !empty( $tab['template'] ) ) : ?>
-									<div id="<?php echo $tab['id'] ?>">
-										<?php include_once( $tab['template'] ); ?>
-									</div>
-								<?php endif; ?>
-							<?php endforeach; ?>
-						</div>
+							</div>
+						<?php } ?>
 						<?php do_meta_boxes( 'post_list_featured_image_dashboard_main', 'left', $object ); ?>
 					</div>
 					<div id="sidebar-container" class="postbox-container" style="width: 24%;">

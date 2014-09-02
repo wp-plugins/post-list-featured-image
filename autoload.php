@@ -12,14 +12,6 @@ class Post_List_Featured_Image_Loader {
 	public static function init() {
 		spl_autoload_register( array( 'Post_List_Featured_Image_Loader', 'autoload' ) );
 
-		add_action( 'init', array( 'Post_List_Featured_Image_Loader', 'load_plugin_textdomain' ) );
-
-		if ( version_compare( PHP_VERSION, '5.3.0', '<' ) ) {
-			add_action( 'admin_notices', array( 'Post_List_Featured_Image_Loader', 'required_php_version' ) );
-
-			return;
-		}
-
 		/*register_activation_hook( __FILE__, array( Admin::instance(), 'activation_actions' ) );
 		register_deactivation_hook( __FILE__, array( Admin::instance(), 'deactivation_actions' ) );*/
 
@@ -43,14 +35,6 @@ class Post_List_Featured_Image_Loader {
 			$error = new WP_Error( 'class_not_found', 'Class ' . $class . ' not found!<br>' . $file );
 			echo $error->get_error_message( 'class_not_found' );
 		}
-	}
-
-	public static function required_php_version() {
-		?>
-		<div class='error' id='message'>
-			<p><?php _e( 'Post List Featured Image plugin requires at least PHP 5.3.0 to work properly.', PLFI_DOMAIN ) ?></p>
-		</div>
-	<?php
 	}
 }
 

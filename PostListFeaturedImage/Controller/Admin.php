@@ -262,7 +262,9 @@ class Admin {
 		$sidebar_metaboxes = $this->admin_page_sidebar_meta_boxes();
 		$this->add_meta_boxes( $sidebar_metaboxes );
 
-		$this->view_vars['tabs'] = TabsData::admin_page();
+		// Tabs
+		$tabs = TabsData::admin_page();
+		$this->view_vars['tabs'] = array_filter( $tabs );
 
 		$this->view_vars['help_content'] = TabsData::help_content();
 
@@ -279,7 +281,8 @@ class Admin {
 		$this->view_vars['object'] = new \stdClass();
 
 		// Tabs
-		$this->view_vars['tabs'] = TabsData::ms_admin_page();
+		$tabs = TabsData::ms_admin_page();
+		$this->view_vars['tabs'] = array_filter( $tabs );
 
 		// Main
 		$main_metaboxes = $this->admin_page_main_meta_boxes();
