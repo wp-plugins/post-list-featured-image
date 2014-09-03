@@ -40,11 +40,25 @@
     #plugin-admin-page #tabs.ui-tabs-vertical.ui-tabs .ui-tabs-panel textarea {
       min-height: 10em;
       width: 100%; }
-#plugin-admin-page #tabs .ui-accordion .ui-accordion-content {
-  padding: 0.5em 1em; }
-  #plugin-admin-page #tabs .ui-accordion .ui-accordion-content a.link {
-    color: #0074A2;
-    text-decoration: underline; }
+#plugin-admin-page #tabs .ui-widget-content {
+  border: none;
+  background: transparent;
+  color: #222; }
+#plugin-admin-page #tabs .ui-widget-header {
+  border-bottom: 1px solid #AAA;
+  background: transparent;
+  color: #222;
+  font-weight: bold; }
+#plugin-admin-page #tabs .ui-state-default, #plugin-admin-page #tabs .ui-widget-content .ui-state-default, #plugin-admin-page #tabs .ui-widget-header .ui-state-default {
+  border: 1px solid #D3D3D3;
+  background: #E6E6E6;
+  font-weight: normal;
+  color: #555; }
+#plugin-admin-page #tabs .ui-state-hover, #plugin-admin-page #tabs .ui-widget-content .ui-state-hover, #plugin-admin-page #tabs .ui-widget-header .ui-state-hover, #plugin-admin-page #tabs .ui-state-focus, #plugin-admin-page #tabs .ui-widget-content .ui-state-focus, #plugin-admin-page #tabs .ui-widget-header .ui-state-focus {
+  border: 1px solid #999;
+  background: #DADADA;
+  font-weight: normal;
+  color: #212121; }
 #plugin-admin-page #tabs .ui-tabs-panel h3 {
   border: 1px solid #CCC; }
 #plugin-admin-page #tabs .desc {
@@ -57,15 +71,19 @@
 #plugin-admin-page .go-pro #pro-btn {
   background: #17B817;
   padding: 15px 30px;
-  color: #fafafa;
+  color: #FAFAFA;
   font-size: 24px;
   border: none;
   border-radius: 10px; }
 #plugin-admin-page .go-pro #pro-btn:hover {
   background: #0095DA; }
 
-#plugin-help .shortcodes-help-row .shortcode-col {
+#plugin-help #help-container h3 {
+  margin: 1rem 0; }
+#plugin-help #help-container .shortcodes-help-row .shortcode-col {
   align-self: center;
   font-weight: bold; }
-#plugin-help .shortcodes-help-row .shortcode-desc-col .row {
+#plugin-help #help-container .shortcodes-help-row .shortcode-desc-col .row {
   padding-bottom: 1em; }
+
+/*# sourceMappingURL=settings-page-style.css.map */

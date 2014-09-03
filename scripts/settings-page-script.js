@@ -1,9 +1,5 @@
 jQuery( function ( $ ) {
     $( "#tabs" ).tabs();
-
-    $( '#help-container-accordion' ).accordion( {
-        heightStyle: "content"
-    } );
     
     $( '.if-js-closed' ).removeClass( 'if-js-closed' ).addClass( 'closed' );
     postboxes.add_postbox_toggles( 'post_list_featured_image_dashboard_main');

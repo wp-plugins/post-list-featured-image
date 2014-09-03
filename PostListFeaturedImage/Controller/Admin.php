@@ -101,27 +101,36 @@ class Admin {
 	 **********************************************/
 
 	public function admin_enqueue_scripts( $hook ) {
+        /**
+         * @var \WP_Scripts $wp_scripts
+         */
+        global $wp_scripts;
+
 		wp_register_style(
 			'flexbox-grid-style',
 			plugins_url( Helper::get_stylesheet_uri( 'flexbox-grid' ), PLFI_PLUGIN_FILE )
 		);
 
+        wp_register_style(
+            'plfi-settings-ui-theme',
+            sprintf(
+                '//ajax.googleapis.com/ajax/libs/jqueryui/%s/themes/smoothness/jquery-ui.min.css',
+                $wp_scripts->registered['jquery-ui-core']->ver
+            )
+        );
+
 		if ( $hook === $this->admin_page_hook_suffix || $hook === $this->ms_admin_page_hook_suffix ) {
 			wp_enqueue_style(
 				'plfi-settings-page-style',
 				plugins_url( Helper::get_stylesheet_uri( 'settings-page' ), PLFI_PLUGIN_FILE ),
-				array( 'flexbox-grid-style' )
+				array( 'flexbox-grid-style', 'plfi-settings-ui-theme' )
 			//, time()
-			);
-			wp_enqueue_style(
-				'plfi-settings-ui-theme',
-				plugins_url( Helper::get_stylesheet_uri( 'jqueryui-theme' ), PLFI_PLUGIN_FILE )
 			);
 
 			wp_enqueue_script(
 				'plfi-settings-page-script',
 				plugins_url( Helper::get_script_uri( 'settings-page' ), PLFI_PLUGIN_FILE ),
-				array( 'jquery', 'jquery-ui-tabs', 'jquery-ui-accordion', 'common', 'wp-lists', 'postbox' ),
+				array( 'jquery', 'jquery-ui-tabs', 'common', 'wp-lists', 'postbox' ),
 				false,
 				true
 			);

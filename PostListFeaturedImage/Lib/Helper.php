@@ -65,7 +65,6 @@ class Helper {
 	 */
 	public static function get_stylesheet_uri( $handle ) {
 		$styles = array(
-			'jqueryui-theme' => 'styles/admin-ui-theme/jquery-ui-1.10.3.custom.min.css',
 			'settings-page'  => 'styles/settings-page-style.min.css',
 			'flexbox-grid'   => 'styles/flexboxgrid.min.css'
 		);

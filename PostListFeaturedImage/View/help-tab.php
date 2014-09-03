@@ -7,8 +7,8 @@ if ( !defined( 'ABSPATH' ) || preg_match(
 	die( "You are not allowed to call this page directly." );
 }
 ?>
-<div id="help-container">
-	<div id="help-container-accordion">
+<div id="help-wrapper">
+	<div id="help-container">
 		<?php
 		if ( !empty( $help_content ) ) {
 			foreach ( (array) $help_content as $help ) {
@@ -20,6 +20,6 @@ if ( !defined( 'ABSPATH' ) || preg_match(
 		}
 		?>
 		
-		<?php do_action( 'post_list_featured_image_help_accordion' ); ?>
+		<?php do_action( 'post_list_featured_image_help' ); ?>
 	</div>
 </div>

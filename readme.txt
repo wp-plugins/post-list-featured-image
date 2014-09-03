@@ -4,7 +4,7 @@ Donate link: http://jaggededgemedia.com/donate/
 Tags: featured, image, posts, pages, developer tools
 Requires at least: WP 3.5.1, PHP 5.3.0
 Tested up to: 3.9.1
-Stable tag: 0.5.4
+Stable tag: 0.5.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -78,6 +78,10 @@ This is especially helpful for assigning new featured image to posts that do not
 * *NEW* Auto set the first image of a post as featured image by *post type*
 
 == Changelog ==
+
+= 0.5.5 =
+* fixed: function name typo
+* changed: jquery-ui theme url
 
 = 0.5.4 =
 * fixed: plugin text domain load call
