@@ -72,7 +72,7 @@ class Helper {
 		$styles = apply_filters( 'plfi_styles_path', $styles );
 
 		if ( !array_key_exists( $handle, $styles ) ) {
-			return new \WP_Error( __( 'ERROR: file not found.', PLFI_DOMAIN ) );
+			return new \WP_Error( __( 'ERROR: file not found.', 'post-list-featured-image' ) );
 		}
 
 		$style = $styles[$handle];
@@ -106,7 +106,7 @@ class Helper {
 		$scripts = apply_filters( 'plfi_scripts_path', $scripts );
 
 		if ( !array_key_exists( $handle, $scripts ) ) {
-			return new \WP_Error( __( 'ERROR: file not found.', PLFI_DOMAIN ) );
+			return new \WP_Error( __( 'ERROR: file not found.', 'post-list-featured-image' ) );
 		}
 
 		$script = $scripts[$handle];

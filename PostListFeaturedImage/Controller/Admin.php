@@ -149,7 +149,7 @@ class Admin {
 	public function admin_menu() {
 		$this->admin_page_hook_suffix = add_media_page(
 			$this->view_vars['plugin']->Name,
-			__( 'Featured Image Settings', PLFI_DOMAIN ),
+			__( 'Featured Image Settings', 'post-list-featured-image' ),
 			'manage_options',
 			Helper::get_settings_page_slug(),
 			array( $this, 'render_plugin_admin_page' )
@@ -162,7 +162,7 @@ class Admin {
 		$this->ms_admin_page_hook_suffix = add_submenu_page(
 			'settings.php',
 			$this->view_vars['plugin']->Name,
-			__( 'PLFI Settings', PLFI_DOMAIN ),
+			__( 'PLFI Settings', 'post-list-featured-image' ),
 			'manage_network_plugins',
 			Helper::get_settings_page_slug(),
 			array( $this, 'render_ms_plugin_admin_page' )
@@ -179,14 +179,14 @@ class Admin {
 		// WHAT Settings Section
 		add_settings_section(
 			'plfi_list_table',
-			__( 'Featured Image List Table Column', PLFI_DOMAIN ),
+			__( 'Featured Image List Table Column', 'post-list-featured-image' ),
 			'__return_false',
 			Helper::get_plugin_settings_section()
 		);
 
 		add_settings_field(
 			'thumb_size',
-			__( 'Thumbnail Size', PLFI_DOMAIN ),
+			__( 'Thumbnail Size', 'post-list-featured-image' ),
 			array( $this, 'plugin_settings_fields' ),
 			Helper::get_plugin_settings_section(),
 			'plfi_list_table',
@@ -227,7 +227,7 @@ class Admin {
 					}
 					printf(
 						'<div class="desc">%s</div>',
-						__( 'The size of the featured image preview in post list table.', PLFI_DOMAIN )
+						__( 'The size of the featured image preview in post list table.', 'post-list-featured-image' )
 					);
 					break;
 			}
@@ -311,7 +311,7 @@ class Admin {
 		$main_metaboxes = array(
 			array(
 				'id'            => 'author_news',
-				'title'         => sprintf( __( '%s News', PLFI_DOMAIN ), $this->view_vars['plugin']->Author ),
+				'title'         => sprintf( __( '%s News', 'post-list-featured-image' ), $this->view_vars['plugin']->Author ),
 				'callback'      => array( $this, 'admin_page_meta_boxes' ),
 				'screen'        => 'post_list_featured_image_dashboard_main',
 				'context'       => 'left',
@@ -327,7 +327,7 @@ class Admin {
 					'id'            => 'go_pro',
 					'title'         => __(
 						'Want more features? Get more control in the Pro Addon!',
-						PLFI_DOMAIN
+						'post-list-featured-image'
 					),
 					'callback'      => array( $this, 'admin_page_meta_boxes' ),
 					'screen'        => 'post_list_featured_image_dashboard_main',
@@ -345,7 +345,7 @@ class Admin {
 		$sidebar_metaboxes = array(
 			array(
 				'id'            => 'plugin_useful',
-				'title'         => __( 'Find the plugin useful?', PLFI_DOMAIN ),
+				'title'         => __( 'Find the plugin useful?', 'post-list-featured-image' ),
 				'callback'      => array( $this, 'admin_page_meta_boxes' ),
 				'screen'        => 'post_list_featured_image_dashboard_sidebar',
 				'context'       => 'right',
@@ -374,11 +374,7 @@ class Admin {
 	public function add_theme_support() {
 		$this->supported_post_types = apply_filters( 'plfi_supported_post_types', $this->supported_post_types );
 
-		remove_theme_support( 'post-thumbnails' );
-		add_theme_support(
-			'post-thumbnails',
-			$this->supported_post_types
-		);
+		add_theme_support( 'post-thumbnails' );
 	}
 
 	/**
@@ -463,7 +459,7 @@ class Admin {
 
 		wp_send_json_success(
 			array(
-				'message'  => __( 'Settings Updated!', PLFI_DOMAIN ),
+				'message'  => __( 'Settings Updated!', 'post-list-featured-image' ),
 				'settings' => apply_filters( 'plfi_save_settings_json_success_response', $settings )
 			)
 		);
@@ -553,15 +549,15 @@ class Admin {
 			?>
 			<select class="postform" id="plfi_filter" name="plfi_filter" style="max-width: 320px;width: auto;">
 				<option value="default"><?php printf(
-						__( 'Show All %s with|without Featured Images', PLFI_DOMAIN ),
+						__( 'Show All %s with|without Featured Images', 'post-list-featured-image' ),
 						$post_type->label
 					); ?></option>
 				<option value="all"><?php printf(
-						__( 'Show All %s with Featured Image', PLFI_DOMAIN ),
+						__( 'Show All %s with Featured Image', 'post-list-featured-image' ),
 						$post_type->label
 					); ?></option>
 				<option value="none"><?php printf(
-						__( 'Show All %s without Featured Image', PLFI_DOMAIN ),
+						__( 'Show All %s without Featured Image', 'post-list-featured-image' ),
 						$post_type->label
 					); ?></option>
 			</select>

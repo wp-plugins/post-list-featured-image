@@ -23,7 +23,7 @@ class TabsData {
 				                  false
 					),
 				'href'     => '#plugin-overview',
-				'title'    => __( 'Overview', PLFI_DOMAIN )
+				'title'    => __( 'Overview', 'post-list-featured-image' )
 			),
 			array(
 				'id'       => 'plugin-settings',
@@ -33,7 +33,7 @@ class TabsData {
 				                  false
 					),
 				'href'     => '#plugin-settings',
-				'title'    => __( 'Settings', PLFI_DOMAIN )
+				'title'    => __( 'Settings', 'post-list-featured-image' )
 			),
 			array(
 				'id'       => 'plugin-tools',
@@ -43,7 +43,7 @@ class TabsData {
 				                  false
 					),
 				'href'     => '#plugin-tools',
-				'title'    => __( 'Tools', PLFI_DOMAIN )
+				'title'    => __( 'Tools', 'post-list-featured-image' )
 			),
 			array(
 				'id'       => 'plugin-help',
@@ -53,7 +53,7 @@ class TabsData {
 				                  false
 					),
 				'href'     => '#plugin-help',
-				'title'    => __( 'Help', PLFI_DOMAIN )
+				'title'    => __( 'Help', 'post-list-featured-image' )
 			),
 		);
 
@@ -71,29 +71,29 @@ class TabsData {
 	public static function help_content() {
 		$help = array(
 			array(
-				'header'  => __( 'Change "Featured Image Thumbnail Size"', PLFI_DOMAIN ),
+				'header'  => __( 'Change "Featured Image Thumbnail Size"', 'post-list-featured-image' ),
 				'content' => __(
 					'Under <code>Settings</code> tab, select the desired thumbnail size and click ' .
 					'<code>Save Changes</code> button.',
-					PLFI_DOMAIN
+					'post-list-featured-image'
 				)
 			),
 			array(
-				'header'  => __( 'Shortcodes', PLFI_DOMAIN ),
+				'header'  => __( 'Shortcodes', 'post-list-featured-image' ),
 				'content' => self::shortcodes_help_html()
 			),
 			array(
-				'header'  => __( 'Support', PLFI_DOMAIN ),
+				'header'  => __( 'Support', 'post-list-featured-image' ),
 				'content' => sprintf(
 					__(
 						'Need support for the %s plugin? Visit the support site at <a class="link" href="http://wordpress.org/support/plugin/post-list-featured-image" target="_blank">Wordpress.org</a>.',
-						PLFI_DOMAIN
+						'post-list-featured-image'
 					),
 					Helper::get_plugin_data( PLFI_PLUGIN_FILE )->Name
 				)
 			),
 			array(
-				'header'  => __( 'Tutorial', PLFI_DOMAIN ),
+				'header'  => __( 'Tutorial', 'post-list-featured-image' ),
 				'content' => ''
 			)
 		);
@@ -103,18 +103,18 @@ class TabsData {
 
 	public static function shortcodes_help_data() {
 		$featured_img_params = array(
-			'post_id' => __( 'The ID of the post that has the featured image that you want to get.', PLFI_DOMAIN ),
+			'post_id' => __( 'The ID of the post that has the featured image that you want to get.', 'post-list-featured-image' ),
 			'size'    => __(
 				'The size of the featured image you want returned. <em>Defaults to "thumbnail".</em>',
-				PLFI_DOMAIN
+				'post-list-featured-image'
 			),
 			'alt'     => __(
 				'"alt" text of the image. <em>Defaults to the "alt" data entered for the image in media library.</em>',
-				PLFI_DOMAIN
+				'post-list-featured-image'
 			),
 			'attr'    => __(
 				'Any additional attribute(s) you want to put in the returned &lt;img&gt; tag. You can pass a URL-query style value as in "foo=bar&var=foobar".',
-				PLFI_DOMAIN
+				'post-list-featured-image'
 			)
 		);
 
@@ -132,8 +132,8 @@ class TabsData {
 				'shortcode' => '[featured_img]',
 				'desc'      => sprintf(
 					'<p>%s</p><p><em>%s</em></p>%s',
-					__( 'Add featured image via shortcode.', PLFI_DOMAIN ),
-					__( 'Parameters:', PLFI_DOMAIN ),
+					__( 'Add featured image via shortcode.', 'post-list-featured-image' ),
+					__( 'Parameters:', 'post-list-featured-image' ),
 					$featured_img_params_list
 				)
 			)

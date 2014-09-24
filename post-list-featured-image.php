@@ -3,7 +3,7 @@
 Plugin Name: Post List Featured Image
 Plugin URI: http://jaggededgemedia.com/blog/post-list-featured-image/
 Description: Adds a featured image column in admin Posts/Pages list.
-Version: 0.5.6
+Version: 0.5.7
 Author: Jagged Edge Media
 Author URI: http://jaggededgemedia.com/
 License: GPL v2 or later
@@ -26,31 +26,35 @@ along with this program.  If not, see <http://www.gnu.org/licenses/gpl-3.0.html>
 */
 
 if ( !defined( 'ABSPATH' ) || preg_match(
-		'#' . basename( __FILE__ ) . '#',
-		$_SERVER['PHP_SELF']
-	)
+        '#' . basename( __FILE__ ) . '#',
+        $_SERVER['PHP_SELF']
+    )
 ) {
-	die( "You are not allowed to call this page directly." );
+    die( "You are not allowed to call this page directly." );
 }
 
 define( 'PLFI_PLUGIN_SLUG', plugin_basename( __FILE__ ) );
 define( 'PLFI_PLUGIN_FILE', __FILE__ );
 define( 'PLFI_PLUGIN_DIR_PATH', plugin_dir_path( __FILE__ ) );
-define( 'PLFI_DOMAIN', dirname( PLFI_PLUGIN_SLUG ) );
 
 function plfi_load_plugin_textdomain() {
-    load_plugin_textdomain( PLFI_DOMAIN, false, PLFI_DOMAIN . '/languages' );
+    load_plugin_textdomain( 'post-list-featured-image', false, 'post-list-featured-image/languages' );
 }
+
 add_action( 'init', 'plfi_load_plugin_textdomain' );
 
 if ( version_compare( PHP_VERSION, '5.3.0', '<' ) ) {
     function plfi_required_php_version() {
         ?>
         <div class='error' id='message'>
-            <p><?php _e( 'Post List Featured Image plugin requires at least PHP 5.3.0 to work properly.', PLFI_DOMAIN ) ?></p>
+            <p><?php _e(
+                    'Post List Featured Image plugin requires at least PHP 5.3.0 to work properly.',
+                    'post-list-featured-image'
+                ) ?></p>
         </div>
     <?php
     }
+
     add_action( 'admin_notices', 'plfi_required_php_version' );
 } else {
     require_once( 'autoload.php' );

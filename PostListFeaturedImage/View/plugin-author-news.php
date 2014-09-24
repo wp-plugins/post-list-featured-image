@@ -17,7 +17,7 @@ if ( !defined( 'ABSPATH' ) || preg_match(
             <p><?php printf(
                     __(
                         'An error occurred while retrieving latest news feed. Check %s site directly for the latest news.',
-                        PLFI_DOMAIN
+                        'post-list-featured-image'
                     ),
                     '<a href="' . trailingslashit( $plugin->AuthorURI ) . '">' . $plugin->Author . '</a>'
                 ); ?>
@@ -46,7 +46,7 @@ if ( !defined( 'ABSPATH' ) || preg_match(
                 $desc      = wp_html_excerpt( $desc, 360 );
                 $desc      = preg_replace(
                     '/Read More &gt;&gt;.+/',
-                    '<a href="' . $permalink . '">' . __( 'Read More', PLFI_DOMAIN ) . '</a>',
+                    '<a href="' . $permalink . '">' . __( 'Read More', 'post-list-featured-image' ) . '</a>',
                     $desc
                 );
                 echo
@@ -65,7 +65,7 @@ if ( !defined( 'ABSPATH' ) || preg_match(
         <p><?php printf(
                 __(
                     'Unable to fetch latest news from %s. Check %s site directly for the latest news.',
-                    PLFI_DOMAIN
+                    'post-list-featured-image'
                 ),
                 $plugin->Author,
                 '<a href="' . trailingslashit( $plugin->AuthorURI ) . '">' . $plugin->Author . '</a>'

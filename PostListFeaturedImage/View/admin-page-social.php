@@ -22,7 +22,7 @@ if ( !defined( 'ABSPATH' ) || preg_match(
 	<div class="twitter">
 		<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/JaggedEdgeMedia"
 		   data-widget-id="401196566704185346"><?php printf(
-				__( 'Tweets by %s', PLFI_DOMAIN ),
+				__( 'Tweets by %s', 'post-list-featured-image' ),
 				'@JaggedEdgeMedia'
 			); ?></a>
 		<script>!function ( d, s, id ) {

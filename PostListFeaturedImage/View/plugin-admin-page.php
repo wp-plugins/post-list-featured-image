@@ -21,7 +21,7 @@ if ( !defined( 'ABSPATH' ) || preg_match(
 	}( document, 'script', 'facebook-jssdk' ));
 </script>
 <div id="plugin-admin-page" class="wrap">
-	<h2><?php printf( __( '%s: Settings', PLFI_DOMAIN ), $plugin->Name ); ?></h2>
+	<h2><?php printf( __( '%s: Settings', 'post-list-featured-image' ), $plugin->Name ); ?></h2>
 	<?php
 	if ( !current_user_can( 'manage_options' ) ) {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
