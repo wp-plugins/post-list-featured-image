@@ -40,7 +40,7 @@ class Admin {
 
 	public function __construct() {
 		$this->plugin_options     = get_option( Helper::get_options_key() );
-		$this->ms_plugin_options  = get_site_option( Helper::get_options_key() );
+		$this->ms_plugin_options  = get_site_option( 'ms_' . Helper::get_options_key() );
 		$this->default_thumb_size = 100;
 
 		$this->supported_post_types = array( 'post', 'page' );
@@ -65,12 +65,6 @@ class Admin {
 		$this->action_hooks();
 
 		$this->filter_hooks();
-	}
-
-	public function activation_actions() {
-	}
-
-	public function deactivation_actions() {
 	}
 
 	protected function action_hooks() {

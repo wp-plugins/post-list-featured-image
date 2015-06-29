@@ -3,8 +3,8 @@ Contributors: JAkzam, pcgrejaldo
 Donate link: http://jaggededgemedia.com/donate/
 Tags: featured, image, posts, pages, developer tools
 Requires at least: WP 3.5.1, PHP 5.3.0
-Tested up to: 4.0
-Stable tag: 0.5.7
+Tested up to: 4.2.2
+Stable tag: 0.5.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -78,6 +78,11 @@ This is especially helpful for assigning new featured image to posts that do not
 * *NEW* Auto set the first image of a post as featured image by *post type*
 
 == Changelog ==
+
+= 0.5.8 =
+* moved: plugin activation/deactivation actions to autoload.php
+* changed: stable/tested tag
+* fixed: multisite options key
 
 = 0.5.7 =
 * changed: unnecessary remove_theme_support function call

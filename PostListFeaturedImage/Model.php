@@ -29,7 +29,7 @@ class Model {
     public function __construct() {
 	    $options_key             = Helper::get_options_key();
 	    $this->plugin_options    = get_option( $options_key );
-	    $this->ms_plugin_options = get_site_option( $options_key );
+	    $this->ms_plugin_options = get_site_option( "ms_$options_key" );
     }
 
 	public function save_plugin_settings( $new_settings = array(), $is_ms = false ) {
@@ -44,7 +44,7 @@ class Model {
 		if ( $is_ms ) {
 			$settings = $this->ms_plugin_options = $new_settings;
 
-			update_site_option( Helper::get_options_key(), $this->ms_plugin_options );
+			update_site_option( 'ms_' . Helper::get_options_key(), $this->ms_plugin_options );
 		} else {
 			$settings = $this->plugin_options = $new_settings;
 
